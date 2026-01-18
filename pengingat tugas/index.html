@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>📌 Pengingat Tugas Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>📌 Pengingat Tugas Sekolah</h1>
+
+    <!-- Form tambah tugas -->
+    <form id="taskForm">
+        <label>Mata Pelajaran</label><br>
+        <input type="text" id="mapel" required><br><br>
+
+        <label>Detail Tugas</label><br>
+        <input type="text" id="detail" required><br><br>
+
+        <label>Waktu Pengingat</label><br>
+        <input type="datetime-local" id="waktu" required><br><br>
+
+        <button type="submit">Simpan Tugas</button>
+    </form>
+
+    <!-- Pilihan audio -->
+    <div id="audioTugas">
+        <label>Pilih Audio Pengingat:</label>
+        <select id="pilihAudio">
+            <option value="audio/alert1.mp3">Alarm 1</option>
+            <option value="audio/alert2.mp3">Alarm 2</option>
+            <option value="audio/alert3.mp3">Alarm 3</option>
+        </select><br><br>
+
+        <label>Atau upload audio sendiri:</label>
+        <input type="file" id="uploadAudio" accept="audio/*">
+    </div>
+
+    <h2>📋 Daftar Tugas</h2>
+    <ul id="taskList"></ul>
+
+    <audio id="audio" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
